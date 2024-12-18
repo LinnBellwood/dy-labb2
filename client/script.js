@@ -19,7 +19,7 @@ async function fetchUsers() {
   }
 }
 function displayUsers(users) {
-  const userListContainer = document.getElementById("user-list");
+  /*const userListContainer = document.getElementById("user-list");*/
   userListContainer.innerHTML = "";
 
   const ul = document.createElement("ul");
@@ -35,7 +35,7 @@ function displayUsers(users) {
     ul.appendChild(li);
   });
 
-  userListContainer.innerHTML = "";
+  /* userListContainer.innerHTML = "";*/
   userListContainer.appendChild(ul);
 }
 

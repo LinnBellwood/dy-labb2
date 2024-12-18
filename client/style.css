@@ -23,12 +23,18 @@ header h1 {
 .user-list {
   width: fit-content;
   list-style: none;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 3rem;
 }
 .user-item {
-  background-color: none;
   font-family: "Courier New", Courier, monospace;
   font-weight: 800;
   /* color: rgb(222, 184, 135);*/
+  border-radius: 0.5rem;
+  background-color: white;
+  padding: 1rem;
+  width: 20%;
 }
 
 .btn-user {
