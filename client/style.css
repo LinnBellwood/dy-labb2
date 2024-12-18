@@ -1,6 +1,6 @@
 body {
   box-sizing: border-box;
-  background-color: rgb(165, 42, 42);
+  background-color: rgb(182, 168, 154);
 }
 
 header {
@@ -11,9 +11,11 @@ header {
 
 header h1 {
   font-size: 2rem;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  color: rgb(222, 184, 135);
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  /*color: rgb(157, 145, 129);*/
   text-align: center;
+  text-shadow: 1px 1px 2px black;
 }
 
 #user-list-container {
@@ -26,29 +28,37 @@ header h1 {
   flex-wrap: wrap;
   display: flex;
   gap: 3rem;
+  padding-left: 2rem;
 }
 .user-item {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 800;
-  /* color: rgb(222, 184, 135);*/
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
   border-radius: 0.5rem;
   background-color: white;
   padding: 1rem;
   width: 20%;
+  box-shadow: 3px 3px 3px black;
 }
 
 .btn-user {
-  background-color: rgb(222, 184, 135);
+  background-color: rgb(205, 182, 164);
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
-  border-color: rgb(210, 105, 30);
+  border-color: rgb(102, 80, 80);
   cursor: pointer;
-  margin: 0rem 0rem 0rem 4rem;
-  font-family: "Courier New", Courier, monospace;
-  color: rgb(165, 42, 42);
-  font-weight: 800;
+  margin: 1rem auto;
+  font-family: "Poppins", sans-serif;
+  color: rgb(102, 80, 80);
+  font-weight: 100;
+  box-shadow: 2px 2px 2px black;
+  display: block;
 }
 
 .btn-user:hover {
-  background-color: rgb(255, 235, 205);
+  transform: scale(1.1);
+}
+
+.user-item:hover {
+  transform: scale(1.1);
+  background-color: rgb(207, 168, 168);
 }
