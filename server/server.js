@@ -1,5 +1,5 @@
 const express = require("express");
-const sqlite3 = require("sqlite3").verbose(); //impor sqlite3
+const sqlite3 = require("sqlite3").verbose();
 const server = express();
 
 server
@@ -20,14 +20,8 @@ const db = new sqlite3.Database("./gik339-labb2.db", (err) => {
     console.log("Ansluten");
   }
 });
-//get-route som svarar med output när roten av servern besöks(5)
-//server.get("/", (req, res) => {
-//    res.send('Första get-route');
-//});
 
-//get-route för users(6) endpoint, req=förfrågan och res=svaret
 server.get("/users", (req, res) => {
-  //tom
   const sqlQuery = "SELECT * FROM users";
 
   db.all(sqlQuery, [], (err, rows) => {
@@ -40,12 +34,11 @@ server.get("/users", (req, res) => {
   });
 });
 
-//listen=servern lyssnar på porten (3000)
 const PORT = 3000;
 server.listen(PORT, () => {
   console.log("server körs http://localhost:${PORT}");
 });
-//test att den fungerar
+
 server.get("/", (req, res) => {
   res.send("Fungerar!");
 });

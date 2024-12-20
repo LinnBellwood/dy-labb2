@@ -18,8 +18,8 @@ async function fetchUsers() {
     console.error("Misslyckad hämtning: ", error);
   }
 }
+
 function displayUsers(users) {
-  /*const userListContainer = document.getElementById("user-list");*/
   userListContainer.innerHTML = "";
 
   const ul = document.createElement("ul");
@@ -35,7 +35,6 @@ function displayUsers(users) {
     ul.appendChild(li);
   });
 
-  /* userListContainer.innerHTML = "";*/
   userListContainer.appendChild(ul);
 }
 
