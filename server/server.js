@@ -15,9 +15,9 @@ server
 
 const db = new sqlite3.Database("./gik339-labb2.db", (err) => {
   if (err) {
-    console.error("misslyckad anslutning", err.message);
+    console.error("Ajdå, anslutning misslyckad ", err.message);
   } else {
-    console.log("Ansluten");
+    console.log("Uppkopplad!");
   }
 });
 
@@ -26,7 +26,7 @@ server.get("/users", (req, res) => {
 
   db.all(sqlQuery, [], (err, rows) => {
     if (err) {
-      console.error("Misslyckad hämtning", err.message);
+      console.error("Ajdå, hämtning misslyckad", err.message);
       res.status(500).send({ error: "error" });
     } else {
       res.send(rows);
