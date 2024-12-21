@@ -23,7 +23,7 @@ function displayUsers(users) {
   listUserContainer.innerHTML = "";
 
   const ul = document.createElement("ul");
-  ul.className = "user-list";
+  ul.className = "list-user";
   ul.setAttribute("aria-label", "Lista med användare");
 
   users.forEach((user) => {
