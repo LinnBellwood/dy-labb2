@@ -1,7 +1,7 @@
 const my_server = "http://localhost:3000/users";
 
 const fetchButton = document.getElementById("fall-down-btn");
-const userListContainer = document.getElementById("user-list");
+const listUserContainer = document.getElementById("list-user");
 let isVisible = false;
 
 async function fetchUsers() {
@@ -20,7 +20,7 @@ async function fetchUsers() {
 }
 
 function displayUsers(users) {
-  userListContainer.innerHTML = "";
+  listUserContainer.innerHTML = "";
 
   const ul = document.createElement("ul");
   ul.className = "user-list";
@@ -35,16 +35,16 @@ function displayUsers(users) {
     ul.appendChild(li);
   });
 
-  userListContainer.appendChild(ul);
+  listUserContainer.appendChild(ul);
 }
 
 fetchButton.addEventListener("click", async () => {
   if (!isVisible) {
     fetchUsers();
-    userListContainer.style.display = "block";
+    listUserContainer.style.display = "block";
     fetchButton.textContent = "Dölj Användare";
   } else {
-    userListContainer.style.display = "none";
+    listUserContainer.style.display = "none";
     fetchButton.textContent = "Visa Användare";
   }
   isVisible = !isVisible;

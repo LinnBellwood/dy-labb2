@@ -18,11 +18,11 @@ header h1 {
   text-shadow: 1px 1px 2px black;
 }
 
-#user-list-container {
+#list-user-container {
   background-color: none;
 }
 
-.user-list {
+.list-user {
   width: fit-content;
   list-style: none;
   flex-wrap: wrap;
